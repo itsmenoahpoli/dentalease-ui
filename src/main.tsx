@@ -6,6 +6,9 @@ import { RouterProvider } from "react-router-dom";
 import { persistQueryClientToLocalStorage, rehydrateQueryClientFromLocalStorage } from "@/utils";
 
 import router from "@/router";
+import "@radix-ui/themes/styles.css";
+import "react-toastify/dist/ReactToastify.css";
+import "@/styles/global.css";
 
 const queryClient: QueryClient = new QueryClient({});
 

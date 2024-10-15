@@ -42,7 +42,5 @@ export const rehydrateQueryClientFromLocalStorage = (queryClient: QueryClient, s
       queryClient.setQueryData(queryKey, state.data);
       queryClient.getQueryCache().find(queryKey)?.setState(state);
     });
-  } catch (error) {
-    console.error("Failed to decrypt or deserialize the cache data:", error);
-  }
+  } catch (error) {}
 };

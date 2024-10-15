@@ -20,7 +20,6 @@ export const secureStoreStorage = {
       return encryptedState;
     } catch (e) {
       console.error("Failed to encrypt state", e);
-      return JSON.stringify(state);
     }
   },
   deserialize: (str: string) => {
