@@ -13,3 +13,8 @@ export { PageHeader } from "./shared/PageHeader";
  * App components
  */
 export { AppIdleChecker } from "./app/AppIdeChecker/index";
+
+/**
+ * Domains components
+ */
+export { SigninForm } from "./domains/auth/SigninForm";
