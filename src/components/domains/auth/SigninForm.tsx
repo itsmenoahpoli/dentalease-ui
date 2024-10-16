@@ -34,7 +34,7 @@ export const SigninForm: React.FC = () => {
           render={({ field }) => <TextField.Root type="password" size="3" placeholder="Enter password" {...field} required />}
         />
 
-        <Button type="submit" size="3" loading={loading}>
+        <Button type="submit" size="3" loading={loading} disabled>
           Log In
         </Button>
       </form>

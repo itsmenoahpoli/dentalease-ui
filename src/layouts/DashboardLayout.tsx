@@ -12,7 +12,10 @@ export const DashboardLayout: React.FC = () => {
         <Flex direction="row" className="h-full">
           <div className="fixed top-0">{/* <DashboardSidebar /> */}</div>
 
-          <div className="dashboard-content h-full ml-[240px] pb-[70px]">{/* <DashboardContent children={<Outlet />} /> */}</div>
+          <div className="dashboard-content h-full ml-[240px] pb-[70px]">
+            {/* <DashboardContent children={<Outlet />} /> */}
+            <Outlet />
+          </div>
         </Flex>
       </div>
     </Theme>
