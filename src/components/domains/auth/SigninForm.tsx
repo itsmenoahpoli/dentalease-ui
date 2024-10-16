@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, Controller, type SubmitHandler } from "react-hook-form";
-import { Card, TextField, Button } from "@radix-ui/themes";
+import { TextField, Button } from "@radix-ui/themes";
 import { useAuthService } from "@/services";
 import type { Credentials } from "@/types/auth.d";
 
@@ -17,8 +17,8 @@ export const SigninForm: React.FC = () => {
   };
 
   return (
-    <Card className="!bg-white !p-5">
-      <h1 className="text-md text-center text-gray-700 font-medium mb-3">DASHBOARD LOGIN</h1>
+    <>
+      <h1 className="text-md text-center text-gray-200 font-medium my-3">LOGIN TO ADMIN DASHBOARD</h1>
 
       <form onSubmit={handleSubmit(onFormSubmit)} className="flex flex-col gap-y-3">
         <Controller
@@ -38,6 +38,6 @@ export const SigninForm: React.FC = () => {
           Log In
         </Button>
       </form>
-    </Card>
+    </>
   );
 };
