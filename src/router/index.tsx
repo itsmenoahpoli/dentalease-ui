@@ -4,18 +4,23 @@ import { LazyLoadComponent } from "@/components";
 import { AuthLayout } from "@/layouts";
 
 /**
+ * Error Page
+ */
+const ErrorPage = LazyLoadComponent(React.lazy(() => import("@/views/ErrorPage")));
+
+/**
  * Auth Pages
  */
 const SigninPage = LazyLoadComponent(React.lazy(() => import("@/views/auth/SignInPage")));
 
 const router = createBrowserRouter([
-  // {
-  //   path: "*",
-  //   element: ErrorPage,
-  // },
+  {
+    path: "*",
+    element: ErrorPage,
+  },
   {
     path: "/",
-    element: <Navigate to="/dashboard/overview" />,
+    element: <Navigate to="/auth/signin" />,
   },
   {
     path: "/auth",
