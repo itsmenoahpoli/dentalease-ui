@@ -11,6 +11,7 @@ export const SigninForm: React.FC = () => {
   const [loading, setLoading] = React.useState<boolean>(false);
 
   const onFormSubmit: SubmitHandler<Credentials> = async (formData): Promise<void> => {
+    return;
     setLoading(true);
 
     await authenticateCredentials(formData, setLoading);
@@ -34,7 +35,7 @@ export const SigninForm: React.FC = () => {
           render={({ field }) => <TextField.Root type="password" size="3" placeholder="Enter password" {...field} required />}
         />
 
-        <Button type="submit" size="3" loading={loading} disabled>
+        <Button type="submit" size="3" loading={loading}>
           Log In
         </Button>
       </form>
